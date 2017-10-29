@@ -32,21 +32,20 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                  fallback: 'style-loader',
-                  //resolve-url-loader may be chained before sass-loader if necessary
-                  use: ['css-loader', {
-                      loader: 'postcss-loader',
-                      options: {
-                        plugins: (loader) => [
-                          require('postcss-import')({ root: loader.resourcePath }),
-                          require('postcss-cssnext')(),
-                          require('autoprefixer')(),
-                          require('cssnano')()
-                        ]
-                      }
-                    },'stylus-loader']
-                })
+                use: [
+                    {
+                        loader: 'style-loader', options: { sourceMap: true }
+                    },
+                    {
+                        loader: 'css-loader', options: { sourceMap: true }
+                    },
+                    {
+                        loader: 'postcss-loader', options: { sourceMap: true }
+                    },
+                    {
+                        loader: 'stylus-loader', options: { sourceMap: true }
+                    }
+                ]
             },
             {
                 test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,

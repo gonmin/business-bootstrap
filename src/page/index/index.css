@@ -1,0 +1,27 @@
+.carousel-indicators li {
+	cursor: pointer;
+}
+
+/*轮播图右边的导航栏样式*/
+.focus-con {
+	padding-top: 40px;
+}
+.nav-category .list-group,
+.nav-category .list-group li {
+	background-color: #6e6568;
+}
+
+.nav-category .list-group li a {
+	color: #fff;
+}
+
+
+/*楼层部分的样式*/
+.floor-item h3 {
+	height: 50px;
+	border-bottom: 1px solid pink
+	line-height: 50px;
+	font-size: 18px;
+	color: pink;
+
+}

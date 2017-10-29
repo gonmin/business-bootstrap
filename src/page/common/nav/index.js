@@ -1,3 +1,5 @@
+import './index.css';
+
 import _mm from 'utils/util.js';
 
 import userService from 'service/user-service.js';
