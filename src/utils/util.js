@@ -7,7 +7,7 @@ var conf = {
 var _mm = {
   request: function (param) {
     var _this = this;
-    jQuery.ajax({
+    $.ajax({
       type: param.method || 'get',
       url: param.url || '',
       dataType: param.type || 'json',

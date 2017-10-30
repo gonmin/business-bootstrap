@@ -8,11 +8,21 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+var htmlWebpackFun = function (page) {
+    return new HtmlWebpackPlugin ({
+        template: `./src/${page}.html`,
+        filename:  `${page}.html`,
+        inject: true,
+        hash: true,
+        chunks: ['common', `${page}`]
+    })
+}
 module.exports = {
     entry: {
         common: './src/page/common/index.js',
         index: './src/page/index/index.js',
-        list: './src/page/list/index.js'
+        list: './src/page/list/index.js',
+        'user-login': './src/page/user-login/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -96,19 +106,8 @@ module.exports = {
             filename: 'js/base.js'
         }),
         new ExtractTextPlugin("css/[name].css"),
-        new HtmlWebpackPlugin ({
-            template: './src/index.html',
-            filename: 'index.html',
-            inject: true,
-            hash: true,
-            chunks: ['common', 'index']
-        }),
-        new HtmlWebpackPlugin ({
-            template: './src/list.html',
-            filename: 'list.html',
-            inject: true,
-            // hash: true,
-            chunks: ['common', 'list']
-        })
+        htmlWebpackFun('index'),
+        htmlWebpackFun('list'),
+        htmlWebpackFun('user-login')
     ]
 }
