@@ -8,12 +8,13 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
-var htmlWebpackFun = function (page) {
+var htmlWebpackFun = function (page, title) {
     return new HtmlWebpackPlugin ({
         template: `./src/${page}.html`,
         filename:  `${page}.html`,
         inject: true,
         hash: true,
+        title: title,
         chunks: ['common', `${page}`]
     })
 }
@@ -22,7 +23,9 @@ module.exports = {
         common: './src/page/common/index.js',
         index: './src/page/index/index.js',
         list: './src/page/list/index.js',
-        'user-login': './src/page/user-login/index.js'
+        result: './src/page/result/index.js',
+        'user-login': './src/page/user-login/index.js',
+        'user-register': './src/page/user-register/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -106,8 +109,11 @@ module.exports = {
             filename: 'js/base.js'
         }),
         new ExtractTextPlugin("css/[name].css"),
-        htmlWebpackFun('index'),
-        htmlWebpackFun('list'),
-        htmlWebpackFun('user-login')
+        htmlWebpackFun('index', '首页'),
+        htmlWebpackFun('list', '列表页'),
+        htmlWebpackFun('result', '结果页'),
+        htmlWebpackFun('user-login', '用户登录'),
+        htmlWebpackFun('user-register', '用户注册')
+
     ]
 }

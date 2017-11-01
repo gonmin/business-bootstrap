@@ -2,7 +2,6 @@ import '../common/nav/index.js';
 
 import './index.css';
 
-require('page/common/footer/index.css');
 
 $(function () {
 	var swiper = {

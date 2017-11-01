@@ -1,0 +1,7 @@
+{{#list}}
+<a href="./detail.html?categoryId={{categoryId}}" class="card">
+  <img class="card-img-top" src="{{imageHost}}{{mainImage}}" alt="{{name}}">
+  <p class="price">￥{{price}}</p>
+  <p class="name">{{name}}</p>
+</a>
+{{/list}}

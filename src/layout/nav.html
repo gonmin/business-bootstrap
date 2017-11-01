@@ -7,18 +7,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
+        <li class="nav-item js-login">
           <a class="nav-link" href="./user-login.html">登录</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">注册</a>
+        <li class="nav-item js-register">
+          <a class="nav-link" href="./user-register.html">注册</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown username-item">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            欢迎你(gong)
+            欢迎你<span class="username">gong</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">退出</a>
+            <a class="dropdown-item js-logout" href="">退出</a>
           </div>
         </li>
         <li class="nav-item">
@@ -35,8 +35,8 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2 search-input" type="search" placeholder="请输入商品名称" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 search-btn" type="button">搜索</button>
       </form>
     </div>
   </nav>

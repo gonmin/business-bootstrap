@@ -2,7 +2,7 @@ var conf = {
   serverHost: ''
 }
 
-// var hogan = require('hogan');
+import hogan from 'hogan';
 
 var _mm = {
   request: function (param) {
@@ -30,8 +30,8 @@ var _mm = {
   },
   // 渲染HTML模板
   renderHtml: function (htmlTemplate, data) {
-    var template = hogan.compile(htmlTemplate);
-      result = template.render(data);
+    var template = hogan.compile(htmlTemplate),
+        result = template.render(data);
     return result;
 
   },
@@ -44,11 +44,11 @@ var _mm = {
     alert(msg || '哪里不对了');
   },
   // 字段的验证。支持非空，手机，邮箱判断
-  validate: function (value, type) {
+  validate: function (value, type = 'require') {
     value = $.trim(value);
     // 非空验证。
     if (type === 'require') {
-      return value;
+      return !!value;
     }
 
     // 手机号验证

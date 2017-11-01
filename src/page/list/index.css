@@ -1,0 +1,64 @@
+/*面包屑部分的样式*/
+.breadcrumb-box {
+    margin-top: 16px;
+    background-color: #e9ecef;
+}
+
+/*排序按钮部分*/
+.sort-box {
+    padding: 10px 0;
+}
+.sort-box span {
+    display: inline-block;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 0 12px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    user-select: none;
+}
+.sort-box span.active {
+    border-color: red;
+    color: red;
+}
+/*产品列表部分的样式*/
+.product-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.product-box .card {
+    display: block;
+    width: calc(20% - 20px);
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+}
+.product-box .card:hover,
+.product-box .card:active {
+    text-decoration: none;
+}
+.product-box .card .card-img-top {
+    width: 100%;
+    height: 200px;
+}
+.product-box .card .card-title {
+    padding: 10px 0;
+    text-align: center;
+}
+.product-box .card p {
+    margin-bottom: 0;
+}
+.product-box .card p.price {
+    color: red;
+    /*font-size: ;*/
+    padding: 6px 6px 0;
+}
+.product-box .card p.name {
+    padding: 4px 6px;
+    font-size: 12px;
+    color: #666;
+}

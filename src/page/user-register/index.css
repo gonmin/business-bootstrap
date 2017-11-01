@@ -1,0 +1,26 @@
+.register-box {
+    width: 400px;
+    margin: 0 auto;
+}
+.register-box h4 {
+    padding-bottom: 0px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.register-box form {
+    display: block;
+    width: 100%;
+}
+
+.login-tips {
+    padding: 10px 0;
+    text-align: right;
+}
+
+/*输入有误的表单提示*/
+.form-err-tips {
+    visibility: hidden;
+    padding: 0.2rem 1.25rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
