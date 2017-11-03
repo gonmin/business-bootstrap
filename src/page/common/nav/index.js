@@ -7,8 +7,17 @@ import userService from 'service/user-service.js';
 var page = {
   init () {
     this.loadUser();
+    this.getKeyword();
     this.bindEvent();
   },
+  // 把关键字回填到输入框中
+  getKeyword () {
+    let keyword = _mm.getUrlParam('keyword');
+    if (keyword) {
+        $('.search-input').val(keyword);
+    }
+  },
+
   loadUser () {
     userService.checkLogin(function (data) {
         $('.js-login').hide().siblings('.js-register').hide()

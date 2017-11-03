@@ -8,15 +8,15 @@
 <body>
     <%= require('html-loader!./layout/nav.html') %>
 
-       <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-box">
-        <div class="container">
-         <ol class="breadcrumb">
-           <li class="breadcrumb-item"><a href="./index.html">主页</a></li>
-           <li class="breadcrumb-item active" aria-current="page"><%= htmlWebpackPlugin.options.title %></li>
-         </ol>
-        </div>
+   <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-box">
+    <div class="container">
+     <ol class="breadcrumb">
+       <li class="breadcrumb-item"><a href="./index.html">主页</a></li>
+       <li class="breadcrumb-item active" aria-current="page"><%= htmlWebpackPlugin.options.title %></li>
+     </ol>
+    </div>
 
-       </nav>
+   </nav>
 
     <div class="container">
         <div class="sort-box">
@@ -38,6 +38,8 @@
 
 
   <%= require('html-loader!./layout/footer.html') %>
+    <!-- <%= require('html-loader!./utils/loading-animation/index.html') %> -->
+
 
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"

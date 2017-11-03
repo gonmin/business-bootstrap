@@ -5,3 +5,11 @@
   <p class="name">{{name}}</p>
 </a>
 {{/list}}
+{{^list}}
+<div class="container">
+   <div class="alert alert-danger" role="alert">
+     很抱歉，没有找到您需要的商品。
+   </div>
+</div>
+{{/list}}
+

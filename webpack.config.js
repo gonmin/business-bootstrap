@@ -24,6 +24,7 @@ module.exports = {
         index: './src/page/index/index.js',
         list: './src/page/list/index.js',
         result: './src/page/result/index.js',
+        detail: './src/page/detail/index.js',
         'user-login': './src/page/user-login/index.js',
         'user-register': './src/page/user-register/index.js'
     },
@@ -112,6 +113,7 @@ module.exports = {
         htmlWebpackFun('index', '首页'),
         htmlWebpackFun('list', '列表页'),
         htmlWebpackFun('result', '结果页'),
+        htmlWebpackFun('detail', '商品详情页'),
         htmlWebpackFun('user-login', '用户登录'),
         htmlWebpackFun('user-register', '用户注册')
 

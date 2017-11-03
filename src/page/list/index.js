@@ -52,11 +52,17 @@ let list = {
         })
     },
     loadList () {
+        $('.product-box').html('<div class="loading-animate1"></div>');
+
         const _this = this;
         productService.getProductList(this.data.listParam, data => {
             var listHtml = _mm.renderHtml(templateString, {
                 list: data.list
             })
+
+            if (!data.list.length) {
+                $('.sort-box').hide();
+            }
 
             $('.product-box').html(listHtml);
             _this.loadPagination({
