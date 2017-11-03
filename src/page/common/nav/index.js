@@ -40,6 +40,10 @@ var page = {
         })
     })
 
+    // 点击登陆
+    $('.js-login').click(() => {
+        _mm.doLogin();
+    })
     // 点击搜索
     $('.search-btn').click(() => {
         this.search();

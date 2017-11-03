@@ -1,3 +1,6 @@
 .username {
     padding-left: 6px;
 }
+.js-login {
+    cursor: pointer;
+}
