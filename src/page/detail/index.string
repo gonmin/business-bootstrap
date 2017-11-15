@@ -5,36 +5,41 @@
             <img src="{{imageHost}}{{mainImage}}" alt="{{name}}">
         </div>
         <ul class="thumbnail-list clx">
-           <li><img src="http://img.happymmall.com/241997c4-9e62-4824-b7f0-7425c3c28917.jpeg" alt=""></li>
-           <li><img src="http://img.happymmall.com/241997c4-9e62-4824-b7f0-7425c3c28917.jpeg" alt=""></li>
-           <li><img src="http://img.happymmall.com/241997c4-9e62-4824-b7f0-7425c3c28917.jpeg" alt=""></li>
+            {{#subImgArr}}
+           <li><img src="{{imageHost}}{{.}}" alt="">
+            {{/subImgArr}}
+
         </ul>
     </div>
     <div class="col-lg-8 detail-info">
-        <h4 class="title">华为手机</h4>
-        <p class="subtitle">满999减50</p>
+        <h4 class="title">{{name}}</h4>
+        <p class="subtitle">{{subtitle}}</p>
         <div class="price">
             <span class="label">价格：</span>
-            <span class="text">￥999</span>
+            <span class="text">￥{{price}}</span>
         </div>
         <div class="stock">
             <span class="label">库存：</span>
-            <span class="text">99</span>
+            <span class="text">{{stock}}</span>
         </div>
         <div class="quantity">
             <span class="label">数量：</span>
             <span class="descrease">-</span>
-            <input type="text" value="1" readonly="readonly">
+            <input class="cart-text" type="text" value="1" readonly="readonly">
             <span class="add">+</span>
         </div>
-
-        <div class="btn btn-primary">立即购买</div>
+        {{#stock}}
+        <div class="btn btn-primary add-cart">加入购物车</div>
+        {{/stock}}
+        {{^stock}}
+        <div class="btn btn-secondary">加入购物车</div>
+        {{/stock}}
 
     </div>
 </div>
 <div class="detail-wrap">
     <div class="title">商品详情</div>
-    <div class="content">kk 不会让你</div>
+    <div class="content">{{{detail}}}</div>
 </div>
 {{/detail}}
 
