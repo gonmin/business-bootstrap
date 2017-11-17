@@ -54,7 +54,7 @@ let detail = {
             let count = $('.cart-text').val();
             let id = this.data.detailInfo.id;
             cartService.addCart(id, count, data => {
-
+                window.location.href = './result.html?type=addcart';
             }, errMsg => {
                 alert(errMsg);
             })

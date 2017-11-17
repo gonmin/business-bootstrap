@@ -10,6 +10,8 @@ import productService from 'service/product-service.js';
 
 import templateString from './index.string';
 
+import blankbg from './blankbg.gif';
+
 let list = {
     data: {
         listParam: {
@@ -64,7 +66,9 @@ let list = {
             }
 
             $('.product-box').html(listHtml);
-        $(window).lazyLoadXT();
+        $(window).lazyLoadXT({
+            blankImage: blankbg
+        });
 
             _this.loadPagination({
                 hasPreviousPage: data.hasPreviousPage,

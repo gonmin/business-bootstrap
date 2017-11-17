@@ -26,7 +26,8 @@ module.exports = {
         result: './src/page/result/index.js',
         detail: './src/page/detail/index.js',
         'user-login': './src/page/user-login/index.js',
-        'user-register': './src/page/user-register/index.js'
+        'user-register': './src/page/user-register/index.js',
+        'cart-list': './src/page/cart-list/index.js'
     },
     output: {
         filename: 'js/[name].js',
@@ -115,7 +116,8 @@ module.exports = {
         htmlWebpackFun('result', '结果页'),
         htmlWebpackFun('detail', '商品详情页'),
         htmlWebpackFun('user-login', '用户登录'),
-        htmlWebpackFun('user-register', '用户注册')
+        htmlWebpackFun('user-register', '用户注册'),
+        htmlWebpackFun('cart-list', '我的购物车')
 
     ]
 }

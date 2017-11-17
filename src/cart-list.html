@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+    <%= require('html-loader!./layout/nav.html') %>
+
+   <nav aria-label="breadcrumb" role="navigation" class="breadcrumb-box">
+    <div class="container">
+     <ol class="breadcrumb">
+       <li class="breadcrumb-item"><a href="./index.html">主页</a></li>
+       <li class="breadcrumb-item active" aria-current="page"><%= htmlWebpackPlugin.options.title %></li>
+     </ol>
+    </div>
+
+   </nav>
+
+    <div class="container">
+        <div class="sort-box">
+            <span class="default active">默认排序</span>
+            <span class="price-down">价格
+                <i class="fa fa-arrow-down down" aria-hidden="true"></i>
+            </span>
+            <span class="price-up">价格
+                <i class="fa fa-arrow-up up" aria-hidden="true"></i>
+            </span>
+        </div>
+        <div class="product-box">
+
+        </div>
+        <nav aria-label="Page navigation example" class="pagination-nav">
+
+        </nav>
+    </div>
+
+
+  <%= require('html-loader!./layout/footer.html') %>
+    <!-- <%= require('html-loader!./utils/loading-animation/index.html') %> -->
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.js"></script>
+</body>
+</html>

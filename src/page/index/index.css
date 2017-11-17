@@ -40,6 +40,9 @@ body {
     margin-right: 20px;
 
 }
+.floor-item .item-con .card .card-link {
+    display: block;
+}
 .floor-item .item-con .card .card-img-top {
     width: 100%;
     height: 200px;
