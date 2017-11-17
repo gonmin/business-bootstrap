@@ -1,6 +1,6 @@
 {{#list}}
 <a href="./detail.html?productId={{id}}" class="card">
-  <img class="card-img-top" src="{{imageHost}}{{mainImage}}" alt="{{name}}">
+  <img class="card-img-top" width="200" height="200" data-src="{{imageHost}}{{mainImage}}" alt="{{name}}">
   <p class="price">￥{{price}}</p>
   <p class="name">{{name}}</p>
 </a>

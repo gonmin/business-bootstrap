@@ -6,8 +6,6 @@ import _mm from 'utils/util.js';
 
 import Pagination from 'utils/pagination/index.js';
 
-
-
 import productService from 'service/product-service.js';
 
 import templateString from './index.string';
@@ -52,6 +50,7 @@ let list = {
         })
     },
     loadList () {
+
         $('.product-box').html('<div class="loading-animate1"></div>');
 
         const _this = this;
@@ -65,6 +64,8 @@ let list = {
             }
 
             $('.product-box').html(listHtml);
+        $(window).lazyLoadXT();
+
             _this.loadPagination({
                 hasPreviousPage: data.hasPreviousPage,
                 prePage: data.prePage,
